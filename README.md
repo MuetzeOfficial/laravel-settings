@@ -44,5 +44,5 @@ Setting::get('someKey');
 ### Console
 It is also possible to set options within the console:
 ```
-php artisan option:set {someKey} {someValue}
+php artisan setting:set {someKey} {someValue}
 ```
