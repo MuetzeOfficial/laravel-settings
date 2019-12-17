@@ -1,38 +1,38 @@
 <?php
 
-if (! function_exists('option')) {
+if (! function_exists('setting')) {
     /**
-     * Get / set the specified option value.
+     * Get / set the specified setting value.
      *
      * If an array is passed as the key, we will assume you want to set an array of values.
      *
      * @param  array|string  $key
      * @param  mixed  $default
-     * @return mixed|\Appstract\Options\Option
+     * @return mixed|\MuetzeOfficial\Settings\Setting
      */
-    function option($key = null, $default = null)
+    function setting($key = null, $default = null)
     {
         if (is_null($key)) {
-            return app('option');
+            return app('setting');
         }
 
         if (is_array($key)) {
-            return app('option')->set($key);
+            return app('setting')->set($key);
         }
 
-        return app('option')->get($key, $default);
+        return app('setting')->get($key, $default);
     }
 }
 
-if (! function_exists('option_exists')) {
+if (! function_exists('setting_exists')) {
     /**
-     * Check the specified option exits.
+     * Check the specified setting exits.
      *
      * @param  string  $key
      * @return mixed
      */
-    function option_exists($key)
+    function setting_exists($key)
     {
-        return app('option')->exists($key);
+        return app('setting')->exists($key);
     }
 }

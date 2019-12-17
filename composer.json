@@ -1,17 +1,23 @@
 {
-    "name": "appstract/laravel-options",
-    "description": "Global options loaded from the database",
+    "name": "MuetzeOfficial/laravel-settings",
+    "description": "Global settings loaded from the database",
     "keywords": [
-        "appstract",
+        "laravel",
         "laravel-options"
     ],
-    "homepage": "https://github.com/appstract/laravel-options",
+    "homepage": "https://github.com/MuetzeOfficial/laravel-settings",
     "license": "MIT",
     "authors": [
         {
             "name": "Gijs Jorissen",
             "email": "hello@appstract.team",
             "homepage": "https://appstract.team",
+            "role": "Developer"
+        },
+        {
+            "name": "Norman Huth",
+            "email": "contact@normanhuth.com",
+            "homepage": "https://nhuth.com",
             "role": "Developer"
         }
     ],
@@ -29,12 +35,12 @@
             "src/helpers.php"
         ],
         "psr-4": {
-            "Appstract\\Options\\": "src"
+            "MuetzeOfficial\\Settings\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Appstract\\Options\\Test\\": "tests"
+            "MuetzeOfficial\\Settings\\Test\\": "tests"
         }
     },
     "scripts": {
@@ -46,10 +52,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Appstract\\Options\\OptionsServiceProvider"
+                "MuetzeOfficial\\Settings\\SettingsServiceProvider"
             ],
             "aliases": {
-                "Option": "Appstract\\Options\\OptionFacade"
+                "Option": "MuetzeOfficial\\Settings\\SettingFacade"
             }
         }
     }
