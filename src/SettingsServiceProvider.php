@@ -44,7 +44,7 @@ class SettingsServiceProvider extends ServiceProvider
     {
         $this->app->afterResolving('blade.compiler', function (BladeCompiler $bladeCompiler) {
             $bladeCompiler->directive('setting', function ($key) {
-                return "<?php setting({$key}); ?>";
+                return "<?php echo setting({$key}); ?>";
             });
         });
     }

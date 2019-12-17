@@ -26,9 +26,16 @@ setting_exists('someKey');
 
 If you want to check if an option exists, you can use the facade:
 ```
-use Setting;
+use MuetzeOfficial\Settings\SettingFacade as Setting;
 
-$check = Setting::exists('someKey');
+Setting::set(['someKey'=>'someValue']);
+
+Setting::set([
+    'someKey'=>'someValue',
+    'anotherKey'=>'anotherValue',
+]);
+
+Setting::get('someKey');
 ```
 ### Blade
 ```
