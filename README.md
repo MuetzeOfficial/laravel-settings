@@ -1,4 +1,6 @@
-This is a Fork of [Laravel Options](https://github.com/appstract/laravel-options) with Settings instead of options.
+<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+
+### Created for [Laravel 6](https://laravel.com)
 
 
 ##### Install  
