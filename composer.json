@@ -1,5 +1,5 @@
 {
-    "name": "MuetzeOfficial/laravel-settings",
+    "name": "muetzeofficial/laravel-settings",
     "description": "Global settings loaded from the database",
     "keywords": [
         "laravel",
