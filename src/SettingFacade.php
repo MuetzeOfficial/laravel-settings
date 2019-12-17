@@ -1,10 +1,10 @@
 <?php
 
-namespace Appstract\Options;
+namespace MuetzeOfficial\Settings;
 
 use Illuminate\Support\Facades\Facade;
 
-class OptionFacade extends Facade
+class SettingFacade extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -13,6 +13,6 @@ class OptionFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'option';
+        return 'setting';
     }
 }

@@ -1,30 +1,18 @@
 <?php
 
-namespace Appstract\Options;
+namespace MuetzeOfficial\Settings;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Option extends Model
+class Setting extends Model
 {
-    /**
-     * Indicates if the model should be timestamped.
-     *
-     * @var bool
-     */
-    public $timestamps = false;
+    protected $primaryKey = 'key';
+    protected $fillable   = ['key', 'value'];
+    public $incrementing  = false;
+    public $timestamps    = false;
 
     /**
-     * The attributes that are mass assignable.
-     *
-     * @var [type]
-     */
-    protected $fillable = [
-        'key',
-        'value',
-    ];
-
-    /**
-     * Determine if the given option value exists.
+     * Determine if the given setting value exists.
      *
      * @param  string  $key
      * @return bool
@@ -35,7 +23,7 @@ class Option extends Model
     }
 
     /**
-     * Get the specified option value.
+     * Get the specified setting value.
      *
      * @param  string  $key
      * @param  mixed   $default
@@ -43,19 +31,19 @@ class Option extends Model
      */
     public function get($key, $default = null)
     {
-        if ($option = self::where('key', $key)->first()) {
-            return $option->value;
+        if ($setting = self::where('key', $key)->first()) {
+            return $setting->value;
         }
 
         return $default;
     }
 
     /**
-     * Set a given option value.
+     * Set a given setting value.
      *
      * @param  array|string  $key
      * @param  mixed   $value
-     * @return void
+     * @return bool
      */
     public function set($key, $value = null)
     {
@@ -64,12 +52,11 @@ class Option extends Model
         foreach ($keys as $key => $value) {
             self::updateOrCreate(['key' => $key], ['value' => $value]);
         }
-
-        // @todo: return the option
+        return true;
     }
 
     /**
-     * Remove/delete the specified option value.
+     * Remove/delete the specified setting value.
      *
      * @param  string  $key
      * @return bool

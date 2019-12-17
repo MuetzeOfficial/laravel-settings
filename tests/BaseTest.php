@@ -1,9 +1,9 @@
 <?php
 
-namespace Appstract\Options\Test;
+namespace MuetzeOfficial\Settings\Test;
 
-use Appstract\Options\OptionFacade;
-use Appstract\Options\OptionsServiceProvider;
+use MuetzeOfficial\Settings\SettingFacade;
+use MuetzeOfficial\Settings\SettingsServiceProvider;
 use Orchestra\Testbench\TestCase;
 
 abstract class BaseTest extends TestCase
@@ -49,7 +49,7 @@ abstract class BaseTest extends TestCase
     protected function getPackageProviders($app)
     {
         return [
-            OptionsServiceProvider::class,
+            SettingsServiceProvider::class,
         ];
     }
 
@@ -63,7 +63,7 @@ abstract class BaseTest extends TestCase
     protected function getPackageAliases($app)
     {
         return [
-            'Option' => OptionFacade::class,
+            'Setting' => SettingFacade::class,
         ];
     }
 }
