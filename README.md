@@ -2,7 +2,7 @@ This is a Fork of [Laravel Options](https://github.com/appstract/laravel-options
 
 
 ##### Install  
-`MuetzeOfficial/laravel-settings`
+`composer require muetzeofficial/laravel-settings`
 
 ##### Publish
 `php artisan vendor:publish --provider="MuetzeOfficial\Settings\SettingsServiceProvider"`
